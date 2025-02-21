@@ -9,12 +9,12 @@ contract BoxV2 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
     uint256 internal number;
 
     constructor() {
-      _disableInitializers();
+        _disableInitializers();
     }
 
     function initialize() public initializer {
-      __Ownable_init(msg.sender);
-      __UUPSUpgradeable_init();
+        __Ownable_init(msg.sender);
+        __UUPSUpgradeable_init();
     }
 
     function setNumber(uint256 _number) external {

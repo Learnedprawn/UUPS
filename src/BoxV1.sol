@@ -9,12 +9,12 @@ contract BoxV1 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
     uint256 internal number;
 
     constructor() {
-      _disableInitializers();
+        _disableInitializers();
     }
 
     function initialize() public initializer {
-      __Ownable_init(msg.sender);
-      __UUPSUpgradeable_init();
+        __Ownable_init(msg.sender);
+        __UUPSUpgradeable_init();
     }
 
     function getNumber() external view returns (uint256) {
@@ -26,5 +26,4 @@ contract BoxV1 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
     }
 
     function _authorizeUpgrade(address newImplementation) internal override {}
-
 }

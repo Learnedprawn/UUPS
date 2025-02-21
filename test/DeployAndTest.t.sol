@@ -48,4 +48,4 @@ contract DeployAndUpgradeTest is StdCheats, Test {
         BoxV2(proxy).setNumber(expectedValue);
         assertEq(expectedValue, BoxV2(proxy).getNumber());
     }
-} 
+}
